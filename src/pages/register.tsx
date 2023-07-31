@@ -1,4 +1,5 @@
 import React from "react";
+import PasswordTextField from "components/auth/tf-password.component";
 
 type Props = {};
 
@@ -18,13 +19,9 @@ const RegisterPage = (props: Props) => {
         placeholder="Email"
         required
       />
-      <input
-        type="password"
-        id="password"
-        className="text-field p-2.5 min-w-full md:min-w-0 md:w-80 h-12 mb-7"
-        placeholder="Password"
-        required
-      />
+
+      <PasswordTextField />
+
       <input
         type="text"
         id="username"
