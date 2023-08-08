@@ -7,6 +7,8 @@ module.exports = {
         "primary-dark": "#28282F",
         fueltown: "#576673",
         infinitenight: "#020f3A",
+        darkmineral: "#525867",
+        nobleblack: "#1E1E24",
       },
     },
   },
