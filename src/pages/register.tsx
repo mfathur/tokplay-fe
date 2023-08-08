@@ -1,9 +1,15 @@
-import React from "react";
 import PasswordTextField from "components/auth/tf-password.component";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const RegisterPage = (props: Props) => {
+  const navigate: NavigateFunction = useNavigate();
+
+  const redirectToLoginPage = () => {
+    navigate("/auth/login", { replace: true });
+  };
+
   return (
     <div className="bg-neutral-100 px-6 min-h-screen justify-center items-center flex flex-col">
       <h1 className="font-bold mb-4 text-xl text-infinitenight">
@@ -32,7 +38,10 @@ const RegisterPage = (props: Props) => {
 
       <p className="mb-12 text-sm text-fueltown">
         Already having an account?{" "}
-        <span className="font-bold hover:cursor-pointer hover:text-stone-600 transition-all text-infinitenight">
+        <span
+          onClick={redirectToLoginPage}
+          className="font-bold hover:cursor-pointer hover:text-stone-600 transition-all text-infinitenight"
+        >
           Login
         </span>
       </p>

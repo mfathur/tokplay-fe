@@ -7,7 +7,7 @@
 }
 
 .btn-contained {
-  @apply bg-primary-dark text-white hover:bg-stone-600 rounded-lg transition-all;
+  @apply bg-primary-dark text-white hover:bg-stone-600 transition-all;
 }
 
 .text-field {

@@ -1,7 +1,12 @@
+import AppRouter from "pages/router";
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
-      <h1 className="text-9xl font-bold">Hello Tokplay!</h1>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
     </div>
   );
 }
