@@ -1,9 +1,14 @@
-import { routerType } from "types/router.types";
 import HomePage from "./home";
 import LoginPage from "./login";
 import NotFoundPage from "./notfound";
 import RegisterPage from "./register";
 import VideoDetailPage from "./videoDetail";
+
+export interface routerType {
+  title: string;
+  path: string;
+  element: JSX.Element;
+}
 
 const pagesData: routerType[] = [
   {

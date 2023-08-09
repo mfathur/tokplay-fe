@@ -1,5 +1,4 @@
-import { routerType } from "types/router.types";
-import pagesData from "./pagesData";
+import pagesData, { routerType } from "./pagesData";
 import { Route, Routes } from "react-router-dom";
 
 const AppRouter = () => {
