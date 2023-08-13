@@ -1,25 +1,27 @@
 import CommentsSection from "components/video/comment-section.component";
 import ProductsSection from "components/video/product-section.component";
 import TopBar from "components/video/top-bar.component";
+import { useLocation, useParams } from "react-router-dom";
 
-type Props = {};
+const VideoDetailPage = () => {
+  const { id } = useParams();
+  const { state } = useLocation();
 
-const VideoDetailPage = (props: Props) => {
   return (
     <div className="flex flex-col min-h-screen p-5">
-      <TopBar />
+      <TopBar title={state.title} merchant={state.merchant} />
 
       <div className="flex h-full mt-4 justify-center grow">
         <iframe
           className="grow"
           title="youtube"
-          src="http://www.youtube.com/embed/W7qWa52k-nE"
+          src={state.link}
           allowFullScreen
         ></iframe>
-        <CommentsSection />
+        <CommentsSection videoId={id} />
       </div>
 
-      <ProductsSection />
+      <ProductsSection videoId={id} />
     </div>
   );
 };

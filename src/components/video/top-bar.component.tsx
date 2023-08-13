@@ -2,9 +2,12 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
-type Props = {};
+type Props = {
+  title: string;
+  merchant: string;
+};
 
-const TopBar = (props: Props) => {
+const TopBar = ({ title, merchant }: Props) => {
   const navigate = useNavigate();
 
   const backToPreviousPage = (): void => {
@@ -19,7 +22,7 @@ const TopBar = (props: Props) => {
         onClick={backToPreviousPage}
       />
       <p className="text-xl">
-        <span className="font-bold">Video Title |</span> Merchant
+        <span className="font-bold">{title} |</span> {merchant}
       </p>
     </div>
   );

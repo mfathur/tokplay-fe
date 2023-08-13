@@ -1,19 +1,36 @@
-type Props = {};
+import Product from "types/product";
+import { convertToRupiahOn } from "utils/formatter";
 
-const ProductItem = (props: Props) => {
+type Props = {
+  product: Product;
+};
+
+const ProductItem = ({ product }: Props) => {
+  const { name, imgUrl, rating, soldAmount, price, discount, link } = product;
+
+  const discountedPrice = ((100 - discount) / 100) * price;
+
+  const handleProductClick = () => {
+    window.open(link, "_blank", "noopener noreferrer");
+  };
+
   return (
-    <div className="w-44 bg-nobleblack hover:bg-gray-900 shadow-lg hover:shadow-2xl hover:cursor-pointer transition-all">
-      <img
-        src="https://amateurphotographer.com/wp-content/uploads/sites/7/2022/10/google-pixel-7pro-photo-joshua-waller-2560-AP-PXL_20221009_134807172.jpg?w=900"
-        alt=""
-      />
-      <div className="m-2">
-        <p className="text-white text-xs">Google Pixel</p>
+    <div
+      onClick={handleProductClick}
+      className="w-44 bg-nobleblack hover:bg-gray-900 shadow-lg hover:shadow-2xl hover:cursor-pointer transition-all"
+    >
+      <img className="w-full h-36" src={imgUrl} alt={name} />
+      <div className="m-2 ">
+        <p className="text-white text-xs">{name}</p>
         <p className="my-1 font-bold text-white text-sm">
-          <span className="text-gray-600 line-through">Rp 120.000</span> Rp
-          100.000
+          <span className="text-gray-600 line-through text-xs">
+            {price !== discountedPrice ? convertToRupiahOn(price) : ""}
+          </span>{" "}
+          {convertToRupiahOn(discountedPrice)}
         </p>
-        <p className="text-xs">4.7 | Sold 17</p>
+        <p className="text-xs">
+          {rating} | Sold {soldAmount}
+        </p>
       </div>
     </div>
   );

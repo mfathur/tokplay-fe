@@ -1,13 +1,14 @@
+import Comment from "types/comment";
+
 type Props = {
-  username: string;
-  comment: string;
+  comment: Comment;
 };
 
-const CommentItem = ({ username, comment }: Props) => {
+const CommentItem = ({ comment }: Props) => {
   return (
-    <p>
-      <span className="font-bold">{username} </span>
-      {comment}
+    <p className="text-gray-200">
+      <span className="font-bold text-gray-400">{comment.username} </span>
+      {comment.comment}
     </p>
   );
 };
