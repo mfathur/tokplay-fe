@@ -45,7 +45,13 @@ const HomePage = () => {
       {!videos ? (
         <Spinner className="text-gray-500 self-center my-auto loading-lg" />
       ) : null}
-      {videos && !error ? <VideosSection videos={videos} /> : null}
+      {videos && !error ? (
+        videos.length !== 0 ? (
+          <VideosSection videos={videos} />
+        ) : (
+          <p className="mt-2">No video found</p>
+        )
+      ) : null}
     </div>
   );
 };
