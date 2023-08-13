@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# **Tokopedia Play Clone - Frontend**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Developed by GG3FSGP0426_Muhammad Fathurrohman
 
-## Available Scripts
+This is a clone of the Tokopedia Play app for Generasi Gigih 3.0 final project. This repo consists of a react application built with `create-react-app`.
 
-In the project directory, you can run:
+## Prerequisite
 
-### `npm start`
+- Node version `>=14.20.0`
+- Back-end app. You can clone the repo through this [link](https://github.com/mfathur/tokplay-be) and run it locally.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Home Page  
+  The user can see a list of videos, search videos by its title, and login to the app / logout from the app.
 
-### `npm test`
+- Video Detail Page  
+  The user can watch the video, see others comments, write a comment to the video, and see the products related to the video.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Register Page  
+  The user can register to the app.
+- Login Page  
+  The user can login to the app.
 
-### `npm run build`
+NOTE: Authentication is only used when writing a comment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to run locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Ensure the back-end app is already running.
+2. Create `.env` file in root directory and copy the snippet below.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+REACT_APP_AXIOS_BASE_URL=http://localhost:3000
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Run `npm install`.
+4. Run `npm start`.
+5. The app has started, open your browser and visit `http://localhost:5000`.
