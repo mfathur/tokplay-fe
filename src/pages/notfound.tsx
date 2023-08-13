@@ -1,8 +1,6 @@
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
-type Props = {};
-
-const NotFoundPage = (props: Props) => {
+const NotFoundPage = () => {
   const navigate: NavigateFunction = useNavigate();
 
   const redirectToHomePage = (): void => {
