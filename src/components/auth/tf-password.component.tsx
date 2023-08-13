@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
-type Props = {};
+type Props = {
+  className?: string;
+  value: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement>;
+};
 
-const PasswordTextField = (props: Props) => {
+const PasswordTextField = ({ className, value, onChange }: Props) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
@@ -12,13 +16,15 @@ const PasswordTextField = (props: Props) => {
   };
 
   return (
-    <div className="relative mb-7">
+    <div className={`${className} relative`}>
       <input
         type={isPasswordVisible ? "text" : "password"}
         id="password"
-        className="text-field p-2.5 min-w-full md:min-w-0 md:w-80 h-12 "
+        className="text-field p-2.5 h-12 w-full"
         placeholder="Password"
         required
+        value={value}
+        onChange={onChange}
       />
       <FontAwesomeIcon
         className="absolute inset-y-4 right-3 text-gray-600 hover:cursor-pointer"
