@@ -13,7 +13,7 @@ const VideoDetailPage = () => {
 
       <div className="flex h-full mt-4 justify-center grow">
         <iframe
-          className="grow"
+          className="grow min-h-[38rem]"
           title="youtube"
           src={state.link}
           allowFullScreen
