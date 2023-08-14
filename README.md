@@ -30,7 +30,7 @@ NOTE: Authentication is only used when writing a comment.
 2. Create `.env` file in root directory and copy the snippet below.
 
 ```
-REACT_APP_AXIOS_BASE_URL=http://localhost:3000
+REACT_APP_AXIOS_BASE_URL=http://localhost:8080
 ```
 
 3. Run `npm install`.
