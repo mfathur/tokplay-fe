@@ -22,7 +22,7 @@ const VideoItem = ({ id, imgSrc, title, merchant, link }: Props) => {
       onClick={goToVideoDetailPage}
       className="relative rounded-lg bg-red-200 w-1/5 h-96 hover:cursor-pointer"
     >
-      <img className="rounded-lg bg-cover h-96" src={imgSrc} alt={title} />
+      <img className="rounded-lg  h-96" src={imgSrc} alt={title} />
       <p className="font-bold absolute bottom-8 left-2">{title}</p>
       <p className="absolute left-2 bottom-2 text-sm">{merchant}</p>
     </div>

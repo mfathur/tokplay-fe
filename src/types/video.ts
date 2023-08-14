@@ -1,7 +1,7 @@
 type Video = {
   _id: string;
   title: string;
-  thumbnail: string;
+  thumbnailUrl: string;
   merchant: string;
   link: string;
 };

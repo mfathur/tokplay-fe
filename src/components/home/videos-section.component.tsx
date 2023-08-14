@@ -14,7 +14,7 @@ const VideosSection = ({ videos }: Props) => {
           id={video._id}
           title={video.title}
           merchant={video.merchant}
-          imgSrc={video.thumbnail}
+          imgSrc={video.thumbnailUrl}
           link={video.link}
         />
       ))}
